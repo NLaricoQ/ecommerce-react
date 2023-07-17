@@ -1,4 +1,4 @@
-import { axiosInstance } from "../../api/axiosinstance";
+import { axiosInstance } from "../../api/axiosInstance";
 
 export const addProductToCart = async ({ token, quantity, productId }) => {
   try {
