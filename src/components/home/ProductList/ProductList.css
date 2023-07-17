@@ -20,4 +20,8 @@
     align-items: center;
     justify-content: center;
   }
+  .product-list_item {
+    position: relative;
+    left: -2rem;
+  }
 }
