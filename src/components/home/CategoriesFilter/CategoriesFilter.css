@@ -16,6 +16,6 @@
     left: 50%;
     transform: translateX(-50%);
     flex-direction: row;
-    height: 8rem;
+    height: 10rem;
   }
 }
