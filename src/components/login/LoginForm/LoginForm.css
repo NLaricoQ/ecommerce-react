@@ -1,0 +1,10 @@
+.login-form {
+  display: flex;
+  flex-direction: column;
+
+  gap: 1rem;
+}
+.email-input,
+.password-input {
+  width: 90%;
+}

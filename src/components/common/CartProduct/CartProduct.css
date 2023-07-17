@@ -1,0 +1,47 @@
+.cart-product {
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+.car-product_img {
+  width: 40%;
+  height: 100%;
+}
+
+.car-product_img img {
+  width: 100%;
+  height: 90%;
+}
+
+.cart-product_detail {
+  position: relative;
+  width: 60%;
+  flex-grow: 1;
+}
+
+.cart-product_header {
+  display: flex;
+  justify-content: space-between;
+}
+.car-product_title {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.cart-product_btn_trash {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 5rem;
+  height: 5rem;
+  border: none;
+  position: absolute;
+  right: 1rem;
+  bottom: 2rem;
+}
+.bxs-trash {
+  font-size: 5rem;
+}
+.price-p {
+  font-size: 1.5rem;
+}

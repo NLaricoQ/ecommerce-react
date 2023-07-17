@@ -1,0 +1,33 @@
+.product-detail-section {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin: 4rem;
+}
+.quantity-btn {
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.btn-quantity {
+  font-size: 2rem;
+}
+.add-cart-btn {
+  width: 10rem;
+  height: 3rem;
+}
+.product-detail-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.update-cart-btn {
+  width: 10rem;
+  height: 3rem;
+}
+@media (max-width: 600px) {
+  .product-detail-img img {
+    width: 80%;
+  }
+}

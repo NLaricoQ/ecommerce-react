@@ -1,0 +1,17 @@
+.main-container {
+  height: 50rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+.main-section {
+  border: 2px solid black;
+  border-radius: 1rem;
+  gap: 2rem;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 1rem;
+}

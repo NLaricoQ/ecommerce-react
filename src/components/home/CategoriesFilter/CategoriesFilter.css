@@ -1,0 +1,21 @@
+.fieldset {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  top: 12rem;
+  left: 3rem;
+  width: 15%;
+  height: 25%;
+}
+
+@media (max-width: 480px) {
+  .fieldset {
+    position: relative;
+    top: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    flex-direction: row;
+    height: 8rem;
+  }
+}
