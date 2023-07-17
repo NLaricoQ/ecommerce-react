@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./cartProduct.css";
+import "./CartProduct.css";
 import { useSelector } from "react-redux";
 import { useUpdateCart } from "../../../hooks/queries/useUpdateCart";
 import { useDeleteProductFromCart } from "../../../hooks/queries/useDeleteProductFromCart";
