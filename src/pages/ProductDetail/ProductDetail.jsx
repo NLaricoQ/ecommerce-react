@@ -46,7 +46,13 @@ const ProductDetail = () => {
     <section>
       <section className="product-detail-section">
         <div className="product-detail-img">
-          <img src={data.images[0].url} alt={data.title} />
+          {data.images && data.images.length > 0 && (
+            <img
+              src={data.images[0].url}
+              alt={data.title}
+              className="product-img"
+            />
+          )}
         </div>
 
         <div>
@@ -57,7 +63,7 @@ const ProductDetail = () => {
             <div>
               <h3>Price</h3>
               <p>
-                <em>{data.price}</em>
+                <em>${data.price}</em>
               </p>
             </div>
             <div>
@@ -83,7 +89,9 @@ const ProductDetail = () => {
           <button className="update-cart-btn">Update in cart</button>
         )}
       </section>
-      <ProductList categories={data.categoryId} excludedIds={[data.id]} />
+      <div className="product-list_detail">
+        <ProductList categories={data.categoryId} excludedIds={[data.id]} />
+      </div>
     </section>
   );
 };

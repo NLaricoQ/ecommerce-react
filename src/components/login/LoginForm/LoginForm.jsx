@@ -35,7 +35,7 @@ const LoginForm = ({ onLogin }) => {
       <div>
         <label htmlFor={passwordId}>Password</label>
       </div>
-      <div>
+      <div className="password-div">
         <input
           type={isPasswordVisible ? "text" : "password"}
           value={formData.password}
@@ -46,6 +46,7 @@ const LoginForm = ({ onLogin }) => {
           className="password-input"
         />
         <button
+          className="vision-btn"
           type="button"
           onClick={() => setIsPasswordVisible(!isPasswordVisible)}
         >
@@ -53,8 +54,10 @@ const LoginForm = ({ onLogin }) => {
         </button>
       </div>
 
-      <div>
-        <button type="submit">Login</button>
+      <div className="submit-login_container">
+        <button type="submit" className="submit-login_btn">
+          <h3>LOGIN</h3>
+        </button>
       </div>
     </form>
   );

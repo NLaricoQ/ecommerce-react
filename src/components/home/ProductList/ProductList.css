@@ -1,27 +1,57 @@
+/* Estilos para la lista de productos en pantallas grandes */
 .product-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-}
-.product-list_item {
   list-style: none;
-  max-width: 300px;
-  width: 100%;
-  height: 550px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  padding: 0;
+  margin: 0;
 }
+
+.product-list_item {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 400px;
+}
+
+/* Estilos para la lista de productos en pantallas medianas */
 @media (max-width: 1024px) {
   .product-list {
-    justify-content: space-around;
+    grid-template-columns: repeat(3, 1fr);
   }
 }
+
+/* Estilos para la lista de productos en pantallas pequeñas */
+@media (max-width: 768px) {
+  .product-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Estilos para la lista de productos en pantallas muy pequeñas (móviles) */
 @media (max-width: 480px) {
   .product-list {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    grid-template-columns: 1fr;
   }
-  .product-list_item {
-    position: relative;
-    left: -2rem;
-  }
+}
+
+/* Estilos opcionales para cuando se cargan los productos */
+.product-list_loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  font-size: 1.2rem;
+  color: #888;
+}
+
+/* Estilos opcionales para cuando ocurre un error */
+.product-list_error {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  font-size: 1.2rem;
+  color: #f44336;
 }

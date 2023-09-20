@@ -39,7 +39,7 @@ const CategoriesFilter = ({
   return (
     <fieldset form={formId} className="fieldset">
       <legend>Categories</legend>
-      <div>
+      <div className="input-box">
         <input
           checked={categoryIdList.length === 0}
           onChange={(e) => handleEmpty(e.target.checked)}
@@ -52,7 +52,7 @@ const CategoriesFilter = ({
         <label htmlFor="empty-category">All</label>
       </div>
       {data.map((category) => (
-        <div key={category.id}>
+        <div key={category.id} className="input-box">
           <input
             checked={categoryIdList.includes(category.id)}
             onChange={(e) => handleChange(e.target.checked, category.id)}

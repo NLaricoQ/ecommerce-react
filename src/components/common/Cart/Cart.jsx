@@ -8,8 +8,9 @@ const Cart = ({ isVisible }) => {
   const { data, isLoading, isError, error } = useCart();
   const createPurchaseMutation = useCreatePurchase();
   const reducer = (acc, cartProduct) => {
+    const price = parseFloat(cartProduct.product.price.replace("$", ""));
     const quantity = Number(cartProduct.quantity);
-    const price = Number(cartProduct.product.price);
+
     return acc + quantity * price;
   };
   const total = data?.reduce(reducer, 0) ?? 0;
@@ -19,15 +20,20 @@ const Cart = ({ isVisible }) => {
   const handleCheckout = () => {
     if (isLogged) createPurchaseMutation.mutate();
   };
-  if (isLoading) return <p>Loading cart...</p>;
+  if (isLoading) return <p>Larico Shop</p>;
 
   if (isError)
     return <p>{error.message ?? "No se pudo cargar el estado del carrito"}</p>;
+
   return (
     <div className={toggleCart}>
       <aside className="cart">
-        <h2 className="cart_title">Shopping Car</h2>
-        {!data.length && <p>The cart is empty</p>}
+        <h2 className="cart_title">Shopping Cart</h2>
+        {!data.length && (
+          <p>
+            The cart is empty, Add products to the cart or check your Purchase
+          </p>
+        )}
         {Boolean(data.length) && (
           <div className="cart-container_list">
             <ul className="cart_list">

@@ -24,7 +24,7 @@ const Navbar = ({ updateCartVisible }) => {
     <>
       <header className="header">
         <Link to="/">
-          <h1 className="header-title">Ecommerce</h1>
+          <h1 className="header-title">LARICO SHOP</h1>
         </Link>
 
         <nav>

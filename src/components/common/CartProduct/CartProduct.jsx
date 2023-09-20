@@ -6,7 +6,7 @@ import { useDeleteProductFromCart } from "../../../hooks/queries/useDeleteProduc
 
 const CartProduct = ({ cartProduct }) => {
   const initialQuantity = Number(cartProduct.quantity);
-  const price = Number(cartProduct.product.price);
+  const price = parseFloat(cartProduct.product.price.replace("$", ""));
   const { mutate, isLoading } = useUpdateCart();
   const deleteMutation = useDeleteProductFromCart();
   const [quantity, setQuantity] = useState(initialQuantity);
@@ -72,7 +72,7 @@ const CartProduct = ({ cartProduct }) => {
           <h5>
             Total:{" "}
             <p className="price-p">
-              <em>$ {initialQuantity * price}</em>
+              <em>${initialQuantity * price}</em>
             </p>
           </h5>
         </div>

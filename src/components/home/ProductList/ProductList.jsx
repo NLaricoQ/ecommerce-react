@@ -10,6 +10,7 @@ const ProductList = ({ categories, title, excludedIds = [] }) => {
     <ul className="product-list">
       {data
         .filter((product) => !excludedIds.includes(product.id))
+        .sort((a, b) => a.id - b.id)
         .map((product) => (
           <li key={product.id} className="product-list_item">
             <ProductCard product={product} />

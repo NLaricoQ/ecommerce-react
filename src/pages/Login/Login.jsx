@@ -20,12 +20,12 @@ const Login = () => {
 
         <section className="login-section">
           <h3>Test data</h3>
-          <ul>
+          <ul className="login-list">
             <li>
-              <em>Email</em>: nelson1995@gmail.com
+              <em>Email</em>: nelson@gmail.com
             </li>
             <li>
-              <em>Password</em>: nelson123456
+              <em>Password</em>: 123456789
             </li>
           </ul>
         </section>

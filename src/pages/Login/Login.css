@@ -1,11 +1,19 @@
 .main-container {
-  height: 50rem;
+  min-height: 85vh;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 0;
   margin: 0;
 }
+
+@media (max-width: 768px) {
+  .main-container {
+    height: auto;
+    padding: 2rem;
+  }
+}
+
 .main-section {
   border: 2px solid black;
   border-radius: 1rem;
@@ -14,4 +22,8 @@
   flex-direction: column;
   margin: 0;
   padding: 1rem;
+}
+
+.login-list {
+  list-style: none;
 }

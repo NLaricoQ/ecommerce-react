@@ -4,6 +4,9 @@
   flex-direction: column;
   margin: 4rem;
 }
+.product-img {
+  height: 50rem;
+}
 .quantity-btn {
   margin-bottom: 2rem;
   display: flex;
@@ -25,6 +28,9 @@
 .update-cart-btn {
   width: 10rem;
   height: 3rem;
+}
+.product-list_detail {
+  margin: 3.5rem;
 }
 @media (max-width: 600px) {
   .product-detail-img img {
