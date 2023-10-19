@@ -5,7 +5,7 @@
   margin: 4rem;
 }
 .product-img {
-  height: 50rem;
+  max-height: 50rem;
 }
 .quantity-btn {
   margin-bottom: 2rem;

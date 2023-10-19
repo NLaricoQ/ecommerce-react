@@ -22,7 +22,7 @@
 .purchase-container {
   display: flex;
   align-items: center;
-  gap: 1.5rem;
+  gap: 3rem;
 }
 .purchase-img-container {
   width: 20%;
@@ -63,6 +63,10 @@
 }
 
 @media (max-width: 768px) {
+  .purchase-container {
+    gap: 0;
+    justify-content: space-around;
+  }
   .purchases-list {
     grid-template-columns: 1fr;
   }
@@ -72,17 +76,20 @@
   }
 
   .purchase-img-container img {
-    max-height: 100px;
+    width: 100%;
   }
 
   .purchase-title {
     font-size: 1.2rem;
+    width: 20%;
   }
 
   .purchase-date {
     font-size: 1rem;
   }
-
+  .purchase-quantity-container {
+    width: 2%;
+  }
   .purchase-quantity {
     font-size: 1.2rem;
   }

@@ -19,6 +19,7 @@ const ProductCard = ({ product }) => {
 
   const handleAdd = (e) => {
     e.preventDefault();
+
     if (!isLogged) navigate("/login");
     else mutate({ quantity: 1, productId: product.id });
   };
